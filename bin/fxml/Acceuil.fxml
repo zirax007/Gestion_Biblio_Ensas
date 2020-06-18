@@ -1,0 +1,863 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import de.jensd.fx.glyphs.octicons.OctIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="932.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controlleur">
+   <children>
+      <VBox prefHeight="565.0" prefWidth="218.0" style="-fx-background-color: #2e3131;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="76.0" prefWidth="218.0" style="-fx-background-color: #83A697;">
+               <children>
+                  <Label graphicTextGap="10.0" layoutX="33.0" layoutY="25.0" prefHeight="27.0" prefWidth="76.0" text="Admin" textFill="#f5eded">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="#fcf8f8" glyphName="USER" />
+                     </graphic>
+                  </Label>
+               </children></Pane>
+            <Button fx:id="btnDocuments" graphicTextGap="18.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="42.0" prefWidth="219.0" stylesheets="@../application/application.css" text="Documents" textFill="#d3cccc">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#f5e6e6" glyphName="BOOK" size="15" />
+               </graphic>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnAdherants" graphicTextGap="18.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="42.0" prefWidth="219.0" stylesheets="@../application/application.css" text="Adherants" textFill="#d3cccc">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#f5e6e6" glyphName="USERS" size="15" />
+               </graphic>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnHistorique" graphicTextGap="18.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="42.0" prefWidth="219.0" stylesheets="@../application/application.css" text="Historique" textFill="#d3cccc">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#f5e6e6" glyphName="HISTORY" size="15" />
+               </graphic>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnParametre" graphicTextGap="18.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="42.0" prefWidth="218.0" stylesheets="@../application/application.css" text="Parametre" textFill="#d3cccc">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="#f5e6e6" glyphName="SETTINGS" size="15" />
+               </graphic>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button graphicTextGap="16.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="42.0" prefWidth="218.0" stylesheets="@../application/application.css" text="Importer excel" textFill="#d3cccc">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView fill="#f5e6e6" glyphName="IMPORT" size="15" />
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <VBox.margin>
+                  <Insets top="100.0" />
+               </VBox.margin>
+            </Button>
+            <Button graphicTextGap="18.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="218.0" stylesheets="@../application/application.css" text="Deconnexion" textFill="#d3cccc">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <OctIconView fill="#f5e6e6" glyphName="SIGN_OUT" text="" />
+               </graphic>
+               <VBox.margin>
+                  <Insets top="110.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" height="0.0" radius="28.41" spread="0.23" width="115.64" />
+         </effect>
+      </VBox>
+      <AnchorPane layoutX="222.0" layoutY="-3.0" prefHeight="565.0" prefWidth="575.0" style="-fx-background-color: red;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="222.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane fx:id="pnlHistorique" prefHeight="565.0" prefWidth="575.0" style="-fx-background-color: #EFEFEF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <AnchorPane prefHeight="76.0" prefWidth="200.0" style="-fx-background-color: #2e3131;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <Label alignment="CENTER" graphicTextGap="15.0" layoutX="343.0" layoutY="21.0" prefHeight="34.0" prefWidth="172.0" text="Historique" textFill="#f5f5f5">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="#f8f4f4" glyphName="HISTORY" />
+                           </graphic>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <VBox layoutX="21.0" layoutY="94.0" prefHeight="454.0" prefWidth="670.0" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="19.0" AnchorPane.topAnchor="94.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="203.0" prefWidth="660.0" VBox.vgrow="NEVER">
+                           <children>
+                              <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="192.0" prefWidth="250.0" style="-fx-background-color: #e8e8e8;" HBox.hgrow="NEVER">
+                                 <HBox.margin>
+                                    <Insets right="90.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <HBox style="-fx-background-color: #72e0dd;">
+                                       <padding>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </padding>
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="33.0" prefWidth="210.0" text="Nombre total de livres" textFill="#fbffff">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <StackPane>
+                                       <children>
+                                          <Circle fill="DODGERBLUE" radius="70.0" strokeType="INSIDE" strokeWidth="10.0" style="-fx-fill: transparent;">
+                                             <stroke>
+                                                <LinearGradient endX="1.0" endY="1.0">
+                                                   <stops>
+                                                      <Stop color="BLACK" />
+                                                      <Stop color="WHITE" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </stroke>
+                                          </Circle>
+                                          <Text fx:id="totalLivre" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                                             <font>
+                                                <Font size="35.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                       </VBox.margin>
+                                    </StackPane>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" style="-fx-background-color: #e8e8e8;">
+                                 <children>
+                                    <HBox style="-fx-background-color: f48ebb;">
+                                       <padding>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </padding>
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="33.0" prefWidth="210.0" text="Nombre de livres empruntes" textFill="#f8f5f6">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <StackPane>
+                                       <children>
+                                          <Circle fill="DODGERBLUE" radius="70.0" strokeType="INSIDE" strokeWidth="10.0" style="-fx-fill: transparent;">
+                                             <stroke>
+                                                <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                                   <stops>
+                                                      <Stop color="BLACK" />
+                                                      <Stop color="WHITE" offset="1.0" />
+                                                   </stops>
+                                                </RadialGradient>
+                                             </stroke>
+                                          </Circle>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                                             <font>
+                                                <Font size="35.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                       </VBox.margin>
+                                    </StackPane>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <HBox.margin>
+                                    <Insets left="70.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="140.0" prefWidth="670.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="192.0" prefWidth="250.0" style="-fx-background-color: #e8e8e8;" HBox.hgrow="NEVER">
+                                 <HBox.margin>
+                                    <Insets right="80.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <HBox style="-fx-background-color: e7b6e7;">
+                                       <padding>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </padding>
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="33.0" prefWidth="210.0" text="Nombre total de proffesseurs" textFill="#fcf8fc">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <StackPane>
+                                       <children>
+                                          <Circle fill="DODGERBLUE" radius="70.0" strokeType="INSIDE" strokeWidth="10.0" style="-fx-fill: transparent;">
+                                             <stroke>
+                                                <LinearGradient endX="1.0" endY="1.0" startX="0.2857142857142857">
+                                                   <stops>
+                                                      <Stop color="#d04141" />
+                                                      <Stop color="WHITE" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </stroke>
+                                          </Circle>
+                                          <Text fx:id="totalprof" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                                             <font>
+                                                <Font size="35.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                       </VBox.margin>
+                                    </StackPane>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="192.0" prefWidth="250.0" style="-fx-background-color: #e8e8e8;">
+                                 <children>
+                                    <HBox style="-fx-background-color: #5cb1a3;">
+                                       <padding>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </padding>
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="33.0" prefWidth="210.0" text="Nombre total d'etudiants" textFill="#fcf8f8">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <StackPane>
+                                       <children>
+                                          <Circle fill="DODGERBLUE" radius="70.0" strokeType="INSIDE" strokeWidth="10.0" style="-fx-fill: transparent;">
+                                             <stroke>
+                                                <LinearGradient endX="0.6285714285714286" endY="1.0" startX="1.0">
+                                                   <stops>
+                                                      <Stop color="#92b99a" />
+                                                      <Stop color="WHITE" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </stroke>
+                                          </Circle>
+                                          <Text fx:id="totaletudi" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                                             <font>
+                                                <Font size="35.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                       </VBox.margin>
+                                    </StackPane>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <HBox.margin>
+                                    <Insets left="80.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children></AnchorPane>
+            <AnchorPane fx:id="pnlParametre" prefHeight="565.0" prefWidth="575.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <AnchorPane prefHeight="76.0" prefWidth="200.0" style="-fx-background-color: #2e3131;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <Label alignment="CENTER" graphicTextGap="15.0" layoutX="205.0" layoutY="30.0" prefHeight="27.0" prefWidth="192.0" text="Parametre" textFill="#fcfcfc" AnchorPane.leftAnchor="205.0" AnchorPane.rightAnchor="178.0">
+                           <graphic>
+                              <MaterialDesignIconView fill="#fcf7f7" glyphName="SETTINGS" size="25" />
+                           </graphic>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutY="515.0" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #2e3131;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <Button fx:id="btnNewcompte" graphicTextGap="10.0" layoutX="46.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="50.0" prefWidth="201.0" stylesheets="@../application/application.css" text="Nouveau compte" textFill="#eeeaea" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="46.0" AnchorPane.topAnchor="0.0">
+                           <graphic>
+                              <FontAwesomeIconView fill="#eff5ed" glyphName="PLUS" size="15" />
+                           </graphic>
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="btnSupprimer" graphicTextGap="10.0" layoutX="306.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="50.0" prefWidth="201.0" stylesheets="@../application/application.css" text="Supprimer compte" textFill="#eeeaea" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="68.0" AnchorPane.topAnchor="0.0">
+                           <graphic>
+                              <MaterialDesignIconView fill="#f8f6f6" glyphName="DELETE_FOREVER" size="15" />
+                           </graphic>
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutY="77.0" prefHeight="437.0" prefWidth="575.0" AnchorPane.bottomAnchor="51.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="77.0">
+                     <children>
+                        <AnchorPane fx:id="pnlSupprimer" layoutX="-1.0" prefHeight="437.0" prefWidth="706.0" style="-fx-background-color: #EFEFEF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <TextField fx:id="textLog" layoutX="185.0" layoutY="150.0" prefHeight="30.0" prefWidth="317.0" style="-fx-border-color: #83a697; -fx-border-radius: 5px;" AnchorPane.leftAnchor="181.0" AnchorPane.rightAnchor="49.0" />
+                              <Label layoutX="58.0" layoutY="154.0" text="Login" textFill="#2c2929" />
+                              <Label layoutX="51.0" layoutY="294.0" text="Mot de passe " textFill="#2c2929" />
+                              <PasswordField fx:id="textpassW" layoutX="181.0" layoutY="288.0" prefHeight="30.0" prefWidth="317.0" style="-fx-border-color: #83a697; -fx-border-radius: 5px;" AnchorPane.leftAnchor="181.0" AnchorPane.rightAnchor="49.0" AnchorPane.topAnchor="288.0" />
+                              <Button layoutX="526.0" layoutY="380.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="116.0" stylesheets="@../application/AutreBoutton.css" text="Supprimer" textFill="#f8f5f5" AnchorPane.bottomAnchor="22.0" AnchorPane.rightAnchor="64.0" />
+                              <MaterialDesignIconView fill="#272c21" glyphName="DELETE_CIRCLE" layoutX="536.0" layoutY="402.0" size="14" text="" AnchorPane.bottomAnchor="33.25" AnchorPane.rightAnchor="156.0" />
+                              <MaterialDesignIconView fill="#6bc7ac" glyphName="DELETE_CIRCLE" layoutX="26.0" layoutY="58.0" size="50" />
+                              <Label layoutX="98.0" layoutY="31.0" prefHeight="27.0" prefWidth="232.0" text="Suppression d'un admin" textFill="#6aa478">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="pnlNewcompte" layoutX="-1.0" layoutY="1.0" prefHeight="437.0" prefWidth="710.0" style="-fx-background-color: #EFEFEF;" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-3.0" AnchorPane.topAnchor="1.0">
+                           <children>
+                              <Label layoutX="69.0" layoutY="104.0" text="Login" textFill="#141313" />
+                              <Label layoutX="69.0" layoutY="177.0" text="Mot de passe" textFill="#141313" />
+                              <Label layoutX="69.0" layoutY="268.0" text="Confirmer mot de passe " textFill="#141313" />
+                              <Label layoutX="69.0" layoutY="350.0" text="Mot de passe admin" textFill="#141313" />
+                              <TextField fx:id="txtLogin" layoutX="223.0" layoutY="88.0" prefHeight="33.0" prefWidth="294.0" style="-fx-border-color: #83A697; -fx-border-radius: 5px;" AnchorPane.leftAnchor="223.0" AnchorPane.rightAnchor="34.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <PasswordField fx:id="txtpassWord" layoutX="223.0" layoutY="172.0" prefHeight="33.0" prefWidth="294.0" style="-fx-border-color: #83A697; -fx-border-radius: 5px;" AnchorPane.leftAnchor="223.0" AnchorPane.rightAnchor="34.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </PasswordField>
+                              <PasswordField fx:id="txtConfPassWord" layoutX="223.0" layoutY="260.0" prefHeight="33.0" prefWidth="294.0" style="-fx-border-color: #83A697; -fx-border-radius: 5px;" AnchorPane.leftAnchor="223.0" AnchorPane.rightAnchor="34.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </PasswordField>
+                              <PasswordField fx:id="txtPasswordAdmin" layoutX="223.0" layoutY="345.0" prefHeight="33.0" prefWidth="294.0" style="-fx-border-color: #83A697; -fx-border-radius: 5px;" AnchorPane.leftAnchor="223.0" AnchorPane.rightAnchor="34.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </PasswordField>
+                              <Button layoutX="545.0" layoutY="392.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="131.0" stylesheets="@../application/AutreBoutton.css" text="Nouveau" textFill="#eeeded" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="34.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></Button>
+                              <MaterialDesignIconView fill="#74d35f" glyphName="ACCOUNT" layoutX="561.0" layoutY="414.0" size="14" AnchorPane.bottomAnchor="21.25" AnchorPane.rightAnchor="135.0" />
+                              <MaterialDesignIconView fill="#86bc68" glyphName="ACCOUNT" layoutX="14.0" layoutY="58.0" size="50" />
+                              <Label layoutX="91.0" layoutY="32.0" prefHeight="30.0" prefWidth="141.0" text="Nouveau Admin" textFill="#6aa478">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children></AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </children></AnchorPane>
+            <AnchorPane fx:id="pnlDocuments" prefHeight="565.0" prefWidth="575.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <AnchorPane prefHeight="76.0" prefWidth="549.0" style="-fx-background-color: #2e3131;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <Label alignment="CENTER" graphicTextGap="10.0" layoutX="101.0" layoutY="21.0" prefHeight="35.0" prefWidth="209.0" text="DOCUMENTS" textFill="#fffdfd" AnchorPane.leftAnchor="101.0" AnchorPane.rightAnchor="265.0">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="#e4bdbd" glyphName="BOOK" />
+                           </graphic>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="23.0" layoutY="76.0" prefHeight="55.0" prefWidth="200.0" style="-fx-background-color: #83A697;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <Button fx:id="btnLivre" alignment="CENTER" layoutX="28.0" layoutY="4.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #83A697;" stylesheets="@../application/buttonDocuments.css" text="Livres" AnchorPane.leftAnchor="200.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="btnGestionLiv" layoutX="523.0" layoutY="3.0" mnemonicParsing="false" onAction="#buttonAction" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #83A697;" stylesheets="@../application/buttonDocuments.css" text="Gestion Livre" AnchorPane.rightAnchor="200.0" />
+                     </children>
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" radius="24.085" width="77.34" />
+                     </effect>
+                  </AnchorPane>
+                  <AnchorPane layoutX="4.0" layoutY="139.0" prefHeight="423.0" prefWidth="544.0" style="-fx-background-color: red;" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="139.0">
+                     <children>
+                        <AnchorPane fx:id="pnlMemoire" prefHeight="423.0" prefWidth="569.0" style="-fx-background-color: #EFEFEF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <TableView layoutX="9.0" layoutY="149.0" prefHeight="271.0" prefWidth="559.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="150.0">
+                                <columns>
+                                  <TableColumn prefWidth="75.0" text="C1" />
+                                  <TableColumn prefWidth="75.0" text="C2" />
+                                    <TableColumn prefWidth="75.0" text="C2" />
+                                    <TableColumn prefWidth="75.0" text="C2" />
+                                    <TableColumn prefWidth="75.0" text="C2" />
+                                    <TableColumn prefWidth="75.0" text="C2" />
+                                    <TableColumn prefWidth="75.0" text="C2" />
+                                </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                              <AnchorPane layoutX="5.0" prefHeight="101.0" prefWidth="559.0" style="-fx-background-color: #fff; -fx-border-color: #83A697;" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                                 <children>
+                                    <FontAwesomeIconView glyphName="SEARCH" layoutX="25.0" layoutY="51.0" size="20" />
+                                    <TextField layoutX="67.0" layoutY="28.0" prefHeight="35.0" prefWidth="343.0" AnchorPane.leftAnchor="66.0" AnchorPane.rightAnchor="150.0" />
+                                    <Button layoutX="418.0" layoutY="28.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="118.0" text="Rechercher" AnchorPane.rightAnchor="23.0" />
+                                 </children>
+                              </AnchorPane>
+                              <Label alignment="CENTER" layoutX="200.0" layoutY="112.0" prefHeight="27.0" prefWidth="261.0" text="Listes des memoires disponibles" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="108.0">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children></AnchorPane>
+                        <AnchorPane fx:id="pnlGestionLiv" prefHeight="423.0" prefWidth="569.0" style="-fx-background-color: #EFEFEF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="17.0" layoutY="12.0" prefHeight="404.0" prefWidth="539.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="17.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="8.0" prefHeight="33.0" prefWidth="379.0" text="Gestion livre" textFill="#6aa478">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtType" layoutX="583.0" layoutY="250.0" prefHeight="25.0" prefWidth="75.0" style="-fx-border-color: #83A697;" AnchorPane.leftAnchor="583.0" AnchorPane.rightAnchor="12.0" />
+                                    <TextField fx:id="txtqte" layoutX="583.0" layoutY="318.0" prefHeight="25.0" prefWidth="75.0" style="-fx-border-color: #83A697;" AnchorPane.leftAnchor="583.0" AnchorPane.rightAnchor="12.0" />
+                                    <TextField fx:id="txtClassement" layoutX="12.0" layoutY="250.0" prefHeight="25.0" prefWidth="40.0" style="-fx-border-color: #83A697;" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="580.0" />
+                                    <TextField fx:id="txtidAuteur" layoutX="12.0" layoutY="171.0" prefHeight="25.0" prefWidth="235.0" style="-fx-border-color: #83A697;" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="580.0" />
+                                    <TextField fx:id="txtRefLivre" layoutX="16.0" layoutY="89.0" style="-fx-border-color: #83A697;" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="580.0" />
+                                    <TextField fx:id="txttitre" layoutX="12.0" layoutY="319.0" style="-fx-border-color: #83A697;" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="580.0" />
+                                    <TextField fx:id="txtlangue" layoutX="583.0" layoutY="171.0" style="-fx-border-color: #83A697;" AnchorPane.leftAnchor="583.0" AnchorPane.rightAnchor="12.0" />
+                                    <TextField fx:id="txtEdition" layoutX="583.0" layoutY="89.0" style="-fx-border-color: #83A697;" AnchorPane.leftAnchor="583.0" AnchorPane.rightAnchor="12.0" />
+                                    <Button layoutX="373.0" layoutY="353.0" mnemonicParsing="false" onAction="#AjouterLivre" prefHeight="25.0" prefWidth="100.0" stylesheets="@../application/AutreBoutton.css" text="Ajouter" AnchorPane.bottomAnchor="9.0" AnchorPane.rightAnchor="197.0" />
+                                    <Button layoutX="486.0" layoutY="355.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" stylesheets="@../application/AutreBoutton.css" text="Modifier" AnchorPane.bottomAnchor="9.0" AnchorPane.rightAnchor="50.0" />
+                                    <Label layoutX="14.0" layoutY="54.0" prefHeight="17.0" prefWidth="118.0" text="Reference Livre" />
+                                    <Label layoutX="14.0" layoutY="144.0" text="ID Auteur " />
+                                    <Label layoutX="14.0" layoutY="221.0" text="Classement" />
+                                    <Label layoutX="14.0" layoutY="291.0" text="Titre" />
+                                    <Label layoutX="583.0" layoutY="54.0" text="Edition" />
+                                    <Label layoutX="583.0" layoutY="144.0" text="Langue" />
+                                    <Label layoutX="583.0" layoutY="221.0" text="Type" />
+                                    <Label layoutX="583.0" layoutY="291.0" text="Quatite" />
+                                 </children>
+                              </AnchorPane>
+                           </children></AnchorPane>
+                        <AnchorPane fx:id="pnlLivre" prefHeight="423.0" prefWidth="569.0" style="-fx-background-color: #EFEFEF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <TableView fx:id="tablelivre" layoutX="5.0" layoutY="150.0" onMouseClicked="#ClicLivre" prefHeight="271.0" prefWidth="559.0" stylesheets="@../application/application.css" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="150.0">
+                                <columns>
+                                  <TableColumn fx:id="ref_livre" prefWidth="100.0" text="Reference liv" />
+                                  <TableColumn fx:id="titre" minWidth="5.0" prefWidth="69.0" text="Titre" />
+                                    <TableColumn fx:id="id_auteur" prefWidth="75.0" text="Auteur" />
+                                    <TableColumn fx:id="langue" prefWidth="75.0" text="Langue" />
+                                    <TableColumn fx:id="classement" prefWidth="75.0" text="Classement " />
+                                    <TableColumn fx:id="edition" prefWidth="75.0" text="Edition" />
+                                    <TableColumn fx:id="type" prefWidth="75.0" text="type" />
+                                    <TableColumn fx:id="quantite" prefWidth="75.0" text="quantite" />
+                                </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                              <AnchorPane layoutX="27.0" layoutY="4.0" prefHeight="93.0" prefWidth="559.0" style="-fx-background-color: #fff; -fx-border-color: #83A697;" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                                 <children>
+                                    <TextField layoutX="62.0" layoutY="34.0" prefHeight="35.0" prefWidth="344.0" promptText="Rechercher par reference livre  ou par titre" AnchorPane.leftAnchor="61.0" AnchorPane.rightAnchor="289.0" />
+                                    <Button layoutX="428.0" layoutY="33.0" mnemonicParsing="false" onAction="#SupprimerLivre" prefHeight="35.0" prefWidth="118.0" stylesheets="@../application/AutreBoutton.css" text="Supprimer" AnchorPane.rightAnchor="13.0">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor></Button>
+                                    <FontAwesomeIconView fill="#a9da6d" glyphName="SEARCH" layoutX="24.0" layoutY="57.0" size="20" wrappingWidth="13.142857551574707" />
+                                    <Button layoutX="427.0" layoutY="34.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="118.0" stylesheets="@../application/AutreBoutton.css" text="Rechercher" AnchorPane.rightAnchor="149.0">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="192.0" layoutY="108.0" prefHeight="35.0" prefWidth="232.0" text="Listes des livres diponibles " textFill="#6aa478" AnchorPane.leftAnchor="192.0" AnchorPane.rightAnchor="145.0">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children></AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </children></AnchorPane>
+            <AnchorPane fx:id="pnlAdherants" prefHeight="565.0" prefWidth="575.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <AnchorPane layoutX="14.0" prefHeight="76.0" prefWidth="218.0" style="-fx-background-color: #2e3131;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <Label alignment="CENTER" graphicTextGap="15.0" layoutX="195.0" layoutY="17.0" prefHeight="42.0" prefWidth="218.0" text="Adherants" textFill="#fff9f9" AnchorPane.leftAnchor="195.0" AnchorPane.rightAnchor="162.0">
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                           <graphic>
+                              <FontAwesomeIconView fill="#e4e0e0" glyphName="USERS" />
+                           </graphic>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="1.0" layoutY="76.0" prefHeight="489.0" prefWidth="575.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="76.0">
+                     <children>
+                        <TabPane layoutX="1.0" layoutY="5.0" prefHeight="482.0" prefWidth="571.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                          <tabs>
+                            <Tab text="Afficher Etudiants ">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="171.0" prefWidth="327.0" style="-fx-background-color: #EFEFEF;">
+                                       <children>
+                                          <TableView fx:id="tableEtudiant" layoutX="1.0" layoutY="112.0" onMouseClicked="#ClicEtudiant" prefHeight="345.0" prefWidth="571.0" stylesheets="@../application/application.css" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="112.0">
+                                            <columns>
+                                              <TableColumn fx:id="CodeEtd" prefWidth="75.0" text="Code etud" />
+                                              <TableColumn fx:id="Nom" prefWidth="75.0" text="Nom" />
+                                                <TableColumn fx:id="prenom" prefWidth="75.0" text="Prenom" />
+                                                <TableColumn fx:id="depar" prefWidth="75.0" text="Departement" />
+                                                <TableColumn fx:id="filiere" prefWidth="75.0" text="Filiere" />
+                                                <TableColumn fx:id="Email" prefWidth="75.0" text="Email" />
+                                                <TableColumn fx:id="nationalt" prefWidth="75.0" text="Nationnalite" />
+                                                <TableColumn fx:id="tel" prefWidth="75.0" text="Telephone" />
+                                            </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                          <AnchorPane layoutX="2.0" layoutY="14.0" prefHeight="93.0" prefWidth="569.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #a9da6d;" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0">
+                                             <children>
+                                                <FontAwesomeIconView fill="#a9da6d" glyphName="SEARCH" layoutX="28.0" layoutY="66.0" size="20" />
+                                                <TextField layoutX="67.0" layoutY="47.0" prefHeight="25.0" prefWidth="367.0" promptText="rechercher par code etudiant " style="-fx-border-color: #83A697; -fx-border-radius: 4px;" AnchorPane.leftAnchor="67.0" AnchorPane.rightAnchor="266.0" />
+                                                <Button layoutX="453.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" stylesheets="@../application/AutreBoutton.css" text="rechercher" AnchorPane.rightAnchor="147.0">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor></Button>
+                                                <Label layoutX="14.0" layoutY="4.0" prefHeight="27.0" prefWidth="152.0" text="Rechercher un etudiant" textFill="#6aa478">
+                                                   <font>
+                                                      <Font name="System Bold" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button layoutX="574.0" layoutY="47.0" mnemonicParsing="false" onAction="#SupprimerEtudiant" prefHeight="25.0" prefWidth="100.0" stylesheets="@../application/AutreBoutton.css" text="Supprimer" AnchorPane.rightAnchor="26.0">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor></Button>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab text="Gestion Etudiants ">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <AnchorPane layoutX="85.0" layoutY="29.0" prefHeight="200.0" prefWidth="587.0" style="-fx-background-color: #EFEFEF;" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="4.0">
+                                             <children>
+                                                <AnchorPane layoutX="98.0" layoutY="63.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="17.0">
+                                                   <children>
+                                                      <TextField fx:id="txtcdEt" layoutX="35.0" layoutY="83.0" style="-fx-border-color: #83A697;" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="580.0" />
+                                                      <TextField fx:id="txtNomEtd" layoutX="12.0" layoutY="175.0" style="-fx-border-color: #83A697;" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="580.0" />
+                                                      <TextField fx:id="txtEmail" layoutX="12.0" layoutY="256.0" style="-fx-border-color: #83A697;" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="580.0" />
+                                                      <TextField fx:id="txtPrenomEtd" layoutX="580.0" layoutY="83.0" style="-fx-border-color: #83A697;" AnchorPane.leftAnchor="580.0" AnchorPane.rightAnchor="12.0" />
+                                                      <TextField fx:id="TxtNatio" layoutX="580.0" layoutY="256.0" style="-fx-border-color: #83A697;" AnchorPane.leftAnchor="580.0" AnchorPane.rightAnchor="12.0" />
+                                                      <TextField fx:id="TxtTelEtd" layoutX="580.0" layoutY="175.0" style="-fx-border-color: #83A697;" AnchorPane.leftAnchor="580.0" AnchorPane.rightAnchor="12.0" />
+                                                      <Label layoutX="14.0" layoutY="54.0" text="Code etudiant" />
+                                                      <Label layoutX="14.0" layoutY="145.0" text="Nom" />
+                                                      <Label layoutX="14.0" layoutY="227.0" text="Email" />
+                                                      <Label layoutX="14.0" layoutY="314.0" text="Departement" />
+                                                      <Label layoutX="580.0" layoutY="54.0" text="Prenom" />
+                                                      <Label layoutX="580.0" layoutY="145.0" text="Telephone" />
+                                                      <Label layoutX="580.0" layoutY="314.0" text="Filiere" />
+                                                      <Label layoutX="580.0" layoutY="227.0" text="Nationnalite" />
+                                                      <Button layoutX="344.0" layoutY="380.0" mnemonicParsing="false" onAction="#AjouterEtudiant" prefHeight="25.0" prefWidth="100.0" stylesheets="@../application/AutreBoutton.css" text="Ajouter" AnchorPane.bottomAnchor="11.0" AnchorPane.rightAnchor="222.0">
+                                                         <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                         </cursor></Button>
+                                                      <Button layoutX="542.0" layoutY="380.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" stylesheets="@../application/AutreBoutton.css" text="Modifier" AnchorPane.bottomAnchor="11.0" AnchorPane.rightAnchor="50.0">
+                                                         <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                         </cursor></Button>
+                                                      <Label layoutX="8.0" layoutY="6.0" prefHeight="27.0" prefWidth="151.0" text="Gestion des etudiants" textFill="#6aa478">
+                                                         <font>
+                                                            <Font name="System Bold" size="13.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ComboBox fx:id="txtDepar" layoutX="11.0" layoutY="342.0" prefWidth="150.0" style="-fx-border-color: #83A697;" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="580.0" />
+                                                      <ComboBox fx:id="txtFiliere" layoutX="505.0" layoutY="342.0" prefWidth="150.0" style="-fx-border-color: #83A697;" AnchorPane.leftAnchor="580.0" AnchorPane.rightAnchor="12.0" />
+                                                   </children>
+                                                </AnchorPane>
+                                             </children></AnchorPane>
+                                       </children></AnchorPane>
+                              </content>
+                            </Tab>
+                              <Tab text="Afficher proffesseurs ">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #EFEFEF;">
+                                       <children>
+                                          <AnchorPane layoutX="43.0" layoutY="14.0" prefHeight="93.0" prefWidth="200.0" style="-fx-background-color: fff;" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="14.0">
+                                             <children>
+                                                <FontAwesomeIconView fill="#a9da6d" glyphName="SEARCH" layoutX="36.0" layoutY="66.0" size="20" />
+                                                <TextField layoutX="71.0" layoutY="47.0" prefHeight="27.0" prefWidth="367.0" promptText="rechercher par identifiant d'un proffesseur ou son nom" style="-fx-border-color: #83a697; -fx-border-radius: 4px;" AnchorPane.leftAnchor="71.0" AnchorPane.rightAnchor="262.0" />
+                                                <Button layoutX="469.0" layoutY="46.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" stylesheets="@../application/AutreBoutton.css" text="rechercher" AnchorPane.rightAnchor="131.0">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor></Button>
+                                                <Label layoutX="14.0" layoutY="6.0" prefHeight="27.0" prefWidth="151.0" text="Chercher un proffesseur" textFill="#6aa478">
+                                                   <font>
+                                                      <Font name="System Bold" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button layoutX="367.0" layoutY="398.0" mnemonicParsing="false" onAction="#SupprimerProf" prefHeight="25.0" prefWidth="100.0" text="Supprimer" />
+                                                <Button layoutX="586.0" layoutY="46.0" mnemonicParsing="false" onAction="#SupprimerProf" prefHeight="25.0" prefWidth="100.0" stylesheets="@../application/AutreBoutton.css" text="Supprimer" AnchorPane.rightAnchor="14.0">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor></Button>
+                                             </children>
+                                          </AnchorPane>
+                                          <TableView fx:id="tableProf" layoutX="53.0" layoutY="129.0" onMouseClicked="#ClicProffesseur" prefHeight="326.0" prefWidth="565.0" stylesheets="@../application/application.css" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="112.0">
+                                            <columns>
+                                              <TableColumn fx:id="id_pro" prefWidth="75.0" text="Identifiant prof" />
+                                              <TableColumn fx:id="nmp" prefWidth="75.0" text="Nom" />
+                                                <TableColumn fx:id="prP" prefWidth="75.0" text="Prenom" />
+                                                <TableColumn fx:id="telPr" prefWidth="75.0" text="Telephone" />
+                                                <TableColumn fx:id="EMpr" prefWidth="75.0" text="Email" />
+                                                <TableColumn fx:id="depP" prefWidth="75.0" text="Departement" />
+                                            </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="Gestions proffesseurs">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #EFEFEF;">
+                                       <children>
+                                          <AnchorPane layoutX="172.0" layoutY="35.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="17.0">
+                                             <children>
+                                                <TextField fx:id="id_proffesseur" layoutX="42.0" layoutY="86.0" style="-fx-border-color: #83A697;" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="580.0" />
+                                                <Label layoutX="14.0" layoutY="14.0" prefHeight="30.0" prefWidth="311.0" text="Gesions des proffesseurs" textFill="#6aa478">
+                                                   <font>
+                                                      <Font name="System Bold" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button layoutX="359.0" layoutY="388.0" mnemonicParsing="false" onAction="#AjouterProffesseur" prefHeight="25.0" prefWidth="100.0" stylesheets="@../application/AutreBoutton.css" text="Ajouter" AnchorPane.bottomAnchor="11.0" AnchorPane.rightAnchor="215.0">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor></Button>
+                                                <TextField fx:id="prenomProf" layoutX="42.0" layoutY="212.0" style="-fx-border-color: #83A697;" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="580.0" />
+                                                <TextField fx:id="NomProf" layoutX="449.0" layoutY="86.0" style="-fx-border-color: #83A697;" AnchorPane.leftAnchor="580.0" AnchorPane.rightAnchor="12.0" />
+                                                <TextField fx:id="telephone" layoutX="451.0" layoutY="212.0" style="-fx-border-color: #83A697;" AnchorPane.leftAnchor="580.0" AnchorPane.rightAnchor="12.0" />
+                                                <TextField fx:id="emailp" layoutX="451.0" layoutY="352.0" style="-fx-border-color: #83A697;" AnchorPane.leftAnchor="580.0" AnchorPane.rightAnchor="12.0" />
+                                                <Button layoutX="566.0" layoutY="396.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" stylesheets="@../application/AutreBoutton.css" text="Modifier" AnchorPane.bottomAnchor="11.0" AnchorPane.rightAnchor="50.0">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor></Button>
+                                                <Label layoutX="14.0" layoutY="57.0" text="ID proffesseur" />
+                                                <Label layoutX="14.0" layoutY="182.0" text="Prenom" />
+                                                <Label layoutX="14.0" layoutY="317.0" text="Departement" />
+                                                <Label layoutX="580.0" layoutY="317.0" text="Email" />
+                                                <Label layoutX="580.0" layoutY="182.0" text="Telephone" />
+                                                <Label layoutX="580.0" layoutY="59.0" text="Nom" />
+                                                <ComboBox fx:id="department" layoutX="12.0" layoutY="352.0" prefWidth="150.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="580.0" />
+                                             </children>
+                                          </AnchorPane>
+                                       </children></AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="Gestion  Emprunt">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #EFEFEF;">
+                                       <children>
+                                          <AnchorPane layoutX="141.0" layoutY="93.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="17.0">
+                                             <children>
+                                                <TextField fx:id="txtid" layoutX="14.0" layoutY="157.0" style="-fx-border-color: #83A697;" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="578.0" />
+                                                <TextField fx:id="txrefLivr" layoutX="580.0" layoutY="157.0" style="-fx-border-color: #83A697;" AnchorPane.leftAnchor="580.0" AnchorPane.rightAnchor="12.0" />
+                                                <DatePicker fx:id="txtdteDebu" layoutX="14.0" layoutY="339.0" style="-fx-border-color: #83A697;" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="578.0" />
+                                                <DatePicker fx:id="txtDateRetr" layoutX="578.0" layoutY="339.0" style="-fx-border-color: #83A697;" AnchorPane.leftAnchor="578.0" AnchorPane.rightAnchor="14.0" />
+                                                <Label layoutX="14.0" layoutY="116.0" text="Identifiant" />
+                                                <Label layoutX="580.0" layoutY="310.0" text="Date retour" />
+                                                <Label layoutX="580.0" layoutY="118.0" text="Reference Livre" />
+                                                <Label layoutX="14.0" layoutY="310.0" text="Date debut" />
+                                                <Label layoutX="14.0" layoutY="6.0" prefHeight="35.0" prefWidth="218.0" text="Gestion des emprunts" textFill="#6aa478">
+                                                   <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <Button layoutX="527.0" layoutY="386.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" stylesheets="@../application/AutreBoutton.css" text="Modifier" AnchorPane.bottomAnchor="11.0" AnchorPane.rightAnchor="47.0">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor></Button>
+                                                <Button layoutX="352.0" layoutY="386.0" mnemonicParsing="false" onAction="#AjouterEmpruntProff" prefHeight="25.0" prefWidth="100.0" stylesheets="@../application/AutreBoutton.css" text="Ajouter" AnchorPane.bottomAnchor="11.0" AnchorPane.rightAnchor="222.0">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor></Button>
+                                                <ComboBox fx:id="identifiate" layoutX="14.0" layoutY="387.0" prefWidth="150.0" style="-fx-border-color: #83A697;" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="578.0" />
+                                                <Label layoutX="14.0" layoutY="366.0" text="Adherant " AnchorPane.bottomAnchor="41.0" />
+                                             </children>
+                                          </AnchorPane>
+                                       </children></AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="Gestion retour prof">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #EFEFEF;">
+                                       <children>
+                                          <AnchorPane layoutX="74.0" layoutY="46.0" prefHeight="93.0" prefWidth="200.0" style="-fx-background-color: #ffffff; -fx-border-color: #a9da6d;" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="14.0">
+                                             <children>
+                                                <TextField layoutX="69.0" layoutY="47.0" prefHeight="25.0" prefWidth="367.0" promptText="rechercher par identifiant" style="-fx-border-color: #83a697; -fx-border-radius: 4px;" AnchorPane.leftAnchor="67.0" AnchorPane.rightAnchor="266.0" />
+                                                <Button layoutX="581.0" layoutY="45.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" stylesheets="@../application/AutreBoutton.css" text="rechercher" AnchorPane.bottomAnchor="21.0" AnchorPane.rightAnchor="19.0" />
+                                                <FontAwesomeIconView fill="#a9da6d" glyphName="SEARCH" layoutX="33.0" layoutY="66.0" size="20" />
+                                                <Button layoutX="461.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" stylesheets="@../application/AutreBoutton.css" text="Supprimer" AnchorPane.rightAnchor="139.0">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                             </children>
+                                          </AnchorPane>
+                                          <TableView fx:id="tableEmpruntprof" layoutX="4.0" layoutY="123.0" prefHeight="327.0" prefWidth="700.0" stylesheets="@../application/application.css" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="112.0">
+                                            <columns>
+                                              <TableColumn fx:id="id_prof" prefWidth="75.0" text="Identifiant" />
+                                              <TableColumn fx:id="pr_ident" prefWidth="75.0" text="prenom identifiant" />
+                                                <TableColumn fx:id="ref_l" prefWidth="75.0" text="Reference Livre" />
+                                                <TableColumn fx:id="dateD" prefWidth="75.0" text="Date debut" />
+                                                <TableColumn fx:id="DateF" prefWidth="75.0" text="Date retour" />
+                                            </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                          <Label layoutX="18.0" layoutY="14.0" prefHeight="27.0" prefWidth="172.0" text="Rechercher une personne" textFill="#6aa478">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </Label>
+                                       </children></AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="Gestion retour etudiant">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #EFEFEF;">
+                                       <children>
+                                          <AnchorPane layoutX="74.0" layoutY="46.0" prefHeight="93.0" prefWidth="200.0" style="-fx-background-color: #ffffff; -fx-border-color: #a9da6d;" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="14.0">
+                                             <children>
+                                                <TextField layoutX="69.0" layoutY="47.0" prefHeight="25.0" prefWidth="367.0" promptText="rechercher par identifiant" style="-fx-border-color: #83a697; -fx-border-radius: 4px;" AnchorPane.leftAnchor="67.0" AnchorPane.rightAnchor="266.0" />
+                                                <Button layoutX="581.0" layoutY="45.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" stylesheets="@../application/AutreBoutton.css" text="rechercher" AnchorPane.bottomAnchor="21.0" AnchorPane.rightAnchor="19.0" />
+                                                <FontAwesomeIconView fill="#a9da6d" glyphName="SEARCH" layoutX="33.0" layoutY="66.0" size="20" />
+                                                <Button layoutX="461.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" stylesheets="@../application/AutreBoutton.css" text="Supprimer" AnchorPane.rightAnchor="139.0">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Button>
+                                             </children>
+                                          </AnchorPane>
+                                          <TableView fx:id="tableEmpruntEtudiant" layoutX="4.0" layoutY="123.0" prefHeight="327.0" prefWidth="700.0" stylesheets="@../application/application.css" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="112.0">
+                                             <columns>
+                                                <TableColumn fx:id="id_prof1" prefWidth="75.0" text="Identifiant" />
+                                                <TableColumn fx:id="pr_ident1" prefWidth="75.0" text="prenom identifiant" />
+                                                <TableColumn fx:id="ref_l1" prefWidth="75.0" text="Reference Livre" />
+                                                <TableColumn fx:id="dateD1" prefWidth="75.0" text="Date debut" />
+                                                <TableColumn fx:id="DateF1" prefWidth="75.0" text="Date retour" />
+                                             </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                          <Label layoutX="18.0" layoutY="14.0" prefHeight="27.0" prefWidth="172.0" text="Rechercher une personne" textFill="#6aa478">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
+               </children></AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

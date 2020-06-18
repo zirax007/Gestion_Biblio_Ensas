@@ -1,0 +1,19 @@
+.button{
+	-fx-border-color:  #3fc380;
+	-fx-border-radius:20px;
+	-fx-background-radius:20px;
+	-fx-text-fill: #3fc380
+	
+}
+.glyph-icon{
+    -fx-fill: White;
+}
+.glyph-icon:hover{
+    -fx-cursor: hand;
+    -fx-fill: black;
+}
+.button:hover{
+		-fx-border-color: #3fc380;
+		-fx-background-color: #3fc380;
+		-fx-text-fill:white ;
+}
